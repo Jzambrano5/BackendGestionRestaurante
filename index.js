@@ -25,7 +25,7 @@ app.use('/api', menuRouter);
 const main = async () => {
     try {
         await sequelize.authenticate();
-        console.log('Base de datos conectada.');
+        console.log('Base de datos conectada correctamente.');
         await sequelize.sync({ alter: false })
         app.listen(_PORT, () => {
             console.log(`Servidor corriendo en el puerto => ${_PORT}`);
